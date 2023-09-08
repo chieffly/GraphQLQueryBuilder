@@ -1,3 +1,7 @@
+import data.graphql.requests.SessionQueryGenerator
+import java.util.*
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val sessionRequest = SessionQueryGenerator.generate(listOf("STARTED", "PLANNED"), Date().time)
+    println(sessionRequest)
 }
